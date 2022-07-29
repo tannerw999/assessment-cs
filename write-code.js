@@ -11,6 +11,7 @@ function addToZero(arr) {
     }
     return false
 }
+
 const res = addToZero([-5,-4,-3,-1,0,1,2,3,4,8]);
 console.log(res);
 
@@ -20,10 +21,10 @@ console.log(res);
 const mySet = new Set()
 function checkForSet (word){
   let string = word.split('')
-  for (let i = 0; i< string.length; i++){
-  mySet.add(string[i])
+    for (let i = 0; i< string.length; i++){
+    mySet.add(string[i])
   }
-  if (mySet.size === string.length){
+    if (mySet.size === string.length){
     return true
   } else {
     return false
@@ -54,16 +55,16 @@ console.log(isPangram(str));
 // Space Complexity: O(n)
 
 // 4) Longest Word
-function longestStringForLoop(arr) {
-    let str
-    let word = "";
+const findLongestWord = (arr) => {
+    let longestCount = 0 
+
     for (let i = 0; i < arr.length; i++) {
-        if (word.length < arr[i].length) {
-            word = arr[i];
+        if (arr[i].length > longestCount) {
+            longestCount = arr[i].length
         }
     }
-    return word;
+    console.log(longestCount)
 }
-console.log(longestStringForLoop(['hi', 'hello']));
+findLongestWord(["hi", "hello"]);
 
 // Space Complexity: O(n)

@@ -1,22 +1,26 @@
-Results for the extraLargeArray
-insert 2.131738633 s
-append 4.630707 ms
-
-Results for the largeArray
-insert 13.851374 ms
-append 792.044 μs
-
-Results for the mediumArray
-insert 226.014 μs unshift   this is the point where push becomes faster than unshift.
-append 184.105 μs push 
+Results for the tinyArray 
+insert 58.681 μs unshift 
+append 167.105 μs push
 
 Results for the smallArray
 insert 66.253 μs unshift 
 append 126.886 μs push
 
-Results for the tinyArray 
-insert 58.681 μs unshift 
-append 167.105 μs push
+Results for the mediumArray
+insert 226.014 μs unshift   this is the point where push becomes faster than unshift.
+append 184.105 μs push 
+
+Results for the largeArray
+insert 13.851374 ms unshift
+append 792.044 μs push
+
+Results for the extraLargeArray
+insert 2.131738633 s unshift
+append 4.630707 ms push
+
+
+
+
 
     Push scales better overall between the functions because even on the extraLargeArray it is still computing the function in ms while the unshift function is now in seconds.
     
